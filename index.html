@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Windows Server EC2 instance</title>
+</head>
+<body>
+        <div class="centered-text">
+
+        <h1>Windows Server EC2 instance</h1>
+        
+        <img class="myImage" src="Amazon EC2.webp" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
+        
+        <h2>Project Overview:</h2>
+        <div >
+        <p class="left ">An Amazon EC2 instance is a virtual server hosted on AWS. In this project, I'm deploying a Windows Server instance to simulate a real-wolrd cloud cloud-hosted Windows environment </p>
+        <h3 class="left ">Key Featuresof this setup</h3>
+        <ul class="left">
+            <li>Windows server AMI: Pre-configured image with Windows OS</li>
+            <li>Public Subnet: Makes the instances accessible over the inetrnet</li>
+            <li>Security Groups: Acts as a virtual firewall  to control inbound/ outbound traffic</li>
+            <li>Remote Desktop Protocol Access: Allows you to remotely log into the Windows instance using Remote Desktop Protocol(port 3389)  </li>
+        </ul>
+        <h4 class="left">Steps taken to complets this project</h4>
+        <ol>
+            <li class="left "><h4>Launch EC2 instance</h4></li>
+            <img class="myImage" src="Screenshot (1).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (2).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <ul class="left ">
+                <li>Navigate to EC2 Dashboard : Launch instance</li>
+                <li>Set the Name </li>
+                <li>Choose an AMI: Microsoft Windows Server </li>
+                <li>Select instance type : t2.micro(free tier eligible)</li>
+            </ul>
+            <br>
+            <li class="left "><h4>Configure Network Settings</h4></li>
+            
+                <img class="myImage" src="Screenshot (3).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
+                <ul class="left ">
+                <li >Choose an exixting VPC and select a Public Subnet</li>
+                <li>Ensure Auto assign Public IP is enabled</li>
+                </ul>
+                <br>
+                 <li class="left">Create or Assign Security Groups </li>
+
+                 <img class="myImage" src="Screenshot (4).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
+                 <br>
+                 <img class="myImage" src="Screenshot (5).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
+                    
+                 <ul class="left">
+                    <li>Create a new Security Groups or select an existing one </li>
+                    <li>Add an Inbound rule <ul>
+                    <li>Type : RPP</li>
+                    <li>Protocol: TCP</li>
+                    <li>Port Range: 3389</li>
+                    <li>Source :IP address</li>
+                    </ul></li>
+                   
+                </ul>
+            </ul>
+            <br>
+            <li class="left" >Launch and Download key Pair</li>
+            <br>
+            <img class="myImage" src="Screenshot (9).png" alt="Amazon EC2 " style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <ul class="left">
+                <li>Create a new key Pair</li>
+                <li>Download the .pem file securely it's needed to decrypt your Windows password</li>
+            </ul>
+            <br>
+            <li class="left" >Connect via RDP</li>
+            <br>
+            <img class="myImage" src="Screenshot (7).png" alt="Amazon EC2 " style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+
+            <img class="myImage" src="Screenshot (8).png" alt="Amazon EC2 " style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <ul class="left">
+                <li>Use key Pair to decrypt the Windows password </li>
+                <li>Open Remote Desktop Connetion on your machine(Laptop)</li>
+            </ul>
+            
+            
+        </ol>
+        </div>
+
+        <script src="javascript.js" charset="utf-8" ></script>
+
+
+        </div>
+</body>
+</html>

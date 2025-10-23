@@ -1,0 +1,14 @@
+.centered-text {
+  text-align: center;              
+  font-family: 'Segoe UI', sans-serif; 
+  font-size: clamp(0.5rem,2.5vw,1.5rem);               
+  font-weight: 600;               
+  color: #333;                    
+  background-color: #f9f9f9;      
+  padding: 20px;                   
+  border-radius: 10px;            
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+.left{
+  text-align:left;
+}
