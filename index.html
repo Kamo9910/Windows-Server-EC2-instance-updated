@@ -14,85 +14,67 @@
         <img class="myImage" src="Amazon EC2.webp" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
         
         <h2>Project Overview:</h2>
-        <div >
-        <p class="left ">An Amazon EC2 instance is a virtual server hosted on AWS. In this project, I'm deploying a Windows Server instance to simulate a real-wolrd cloud cloud-hosted Windows environment </p>
-        <h3 class="left ">Key Features of this setup</h3>
-        <ul class="left">
-            <li>Windows server AMI: Pre-configured image with Windows OS</li>
-            <li>Public Subnet: Makes the instances accessible over the inetrnet</li>
-            <li>Security Groups: Acts as a virtual firewall  to control inbound/ outbound traffic</li>
-            <li>Remote Desktop Protocol Access: Allows you to remotely log into the Windows instance using Remote Desktop Protocol(port 3389)  </li>
+        <p>An Amazon EC2 instance is a virtual server hosted on AWS. In this project, I'm deploying a Windows Server instance to simulate a real-wolrd cloud cloud-hosted Windows environment </p>
+        
         </ul>
-        <h4 class="left">Steps taken to complets this project</h4>
-        <ol>
-            <li class="left "><h4>Launch EC2 instance</h4></li>
+        <h3>Steps taken to complets this project</h3>
+            <h4>1. Launch EC2 instance</h4>
             <img class="myImage" src="Screenshot (1).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
             <br>
             <img class="myImage" src="Screenshot (2).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
             <br>
-            <ul class="left ">
-                <li>Navigate to EC2 Dashboard : Launch instance</li>
-                <li>Set the Name </li>
-                <li>Choose an AMI: Microsoft Windows Server </li>
-                <li>Select instance type : t2.micro(free tier eligible)</li>
-            </ul>
+                <p>- Navigate to EC2 Dashboard : Launch instance<br>
+                - Set the Name <br>
+                - Choose an AMI: Microsoft Windows Server <br>
+                - Select instance type : t2.micro(free tier eligible)</p>
             <br>
-            <li class="left "><h4>Configure Network Settings</h4></li>
-            
+            <h4>2. Configure Network Settings</h4>
+            <br>
                 <img class="myImage" src="Screenshot (3).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
-                <ul class="left ">
-                <li >Choose an exixting VPC and select a Public Subnet</li>
-                <li>Ensure Auto assign Public IP is enabled</li>
-                </ul>
                 <br>
-                 <li class="left">Create or Assign Security Groups </li>
+                <p>- Choose an exixting VPC and select a Public Subnet<br>
+                - Ensure Auto assign Public IP is enabled</p>
+                <br>
+                 <h4>3. Create or Assign Security Groups </h4>
                     <br>
                  <img class="myImage" src="Screenshot (4).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
                  <br>
                  <img class="myImage" src="Screenshot (5).png" alt="Amazon EC2" style="transition: transform 0.3s ease;" height="50%" width="50%">
-                    
-                 <ul class="left">
-                    <li>Create a new Security Groups or select an existing one </li>
-                    <li>Add an Inbound rule <ul>
-                    <li>Type : RPP</li>
-                    <li>Protocol: TCP</li>
-                    <li>Port Range: 3389</li>
-                    <li>Source :IP address</li>
-                    </ul></li>
-                   
-                </ul>
-            </ul>
+                 <br>
+                    <p>- Create a new Security Groups or select an existing one <br>
+                    - Add an Inbound rule <br>
+                    - Type : RPP<br>
+                    - Protocol: TCP<br>
+                    - Port Range: 3389<br>
+                    - Source :IP address</p>
             <br>
-            <li class="left" >Launch and Download key Pair</li>
+            <h4>4. Launch and Download key Pair</h4>
             <br>
             <img class="myImage" src="Screenshot (9).png" alt="Amazon EC2 " style="transition: transform 0.3s ease;" height="50%" width="50%">
             <br>
-            <ul class="left">
-                <li>Create a new key Pair</li>
-                <li>Download the .pem file securely it's needed to decrypt your Windows password</li>
-            </ul>
+                <p>- Create a new key Pair<br>
+                - Download the .pem file securely it's needed to decrypt your Windows password</p>
             <br>
-            <li class="left" >Connect via RDP</li>
+            <h4>5. Connect via RDP</h4>
             <br>
             <img class="myImage" src="Screenshot (7).png" alt="Amazon EC2 " style="transition: transform 0.3s ease;" height="50%" width="50%">
             <br>
-
             <img class="myImage" src="Screenshot (8).png" alt="Amazon EC2 " style="transition: transform 0.3s ease;" height="50%" width="50%">
             <br>
-            <ul class="left">
-                <li>Use key Pair to decrypt the Windows password </li>
-                <li>Open Remote Desktop Connetion on your machine(Laptop)</li>
-            </ul>
-            
-            
-        </ol>
-        </div>
+                <p>- Use key Pair to decrypt the Windows password <br>
+                - Open Remote Desktop Connetion on your machine(Laptop)</p>
+                <br>
+        <h3>Key Features of this setup</h3>
+            <p>- Windows server AMI: Pre-configured image with Windows OS<br>
+            - Public Subnet: Makes the instances accessible over the inetrnet<br>
+            - Security Groups: Acts as a virtual firewall  to control inbound/ outbound traffic<br>
+            - Remote Desktop Protocol Access: Allows you to remotely log into the Windows instance using Remote Desktop Protocol(port 3389) </p>
+         </div>
 
         <script src="javascript.js" charset="utf-8" ></script>
-
-
-        </div>
+   
 </body>
 
 </html>
+
 
